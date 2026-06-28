@@ -21,450 +21,269 @@ body{
     color:#fff;
     overflow-x:hidden;
     min-height:100vh;
+    padding-bottom:80px;
 }
 
 @keyframes bgMove{
-
-0%{
-background-position:0% 50%;
+    0%{ background-position:0% 50%; }
+    50%{ background-position:100% 50%; }
+    100%{ background-position:0% 50%; }
 }
 
-50%{
-background-position:100% 50%;
-}
-
-100%{
-background-position:0% 50%;
-}
-
-}
-
-/* Loader */
-
+/* Loader Screen */
 #loader{
-
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:#111;
-display:flex;
-justify-content:center;
-align-items:center;
-z-index:9999;
-
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
 }
 
 #loader h1{
-
-font-size:35px;
-animation:pulse 1.2s infinite;
-
+    font-size:35px;
+    animation:pulse 1.2s infinite;
 }
 
 @keyframes pulse{
-
-0%{opacity:.5;}
-50%{opacity:1;}
-100%{opacity:.5;}
-
+    0%{opacity:.5;}
+    50%{opacity:1;}
+    100%{opacity:.5;}
 }
 
-/* Hero */
-
+/* Hero Section */
 .hero{
-
-height:100vh;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-padding:20px;
-
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
 }
 
 .hero h3{
-
-font-size:28px;
-margin-bottom:20px;
-
+    font-size:28px;
+    margin-bottom:20px;
 }
 
 .hero h1{
-
-font-size:75px;
-font-weight:700;
-margin-bottom:20px;
-text-shadow:0 0 20px rgba(255,255,255,.4);
-
+    font-size:75px;
+    font-weight:700;
+    margin-bottom:20px;
+    text-shadow:0 0 20px rgba(255,255,255,.4);
 }
 
 .subtitle{
-
-max-width:750px;
-font-size:22px;
-line-height:1.8;
-
+    max-width:750px;
+    font-size:22px;
+    line-height:1.8;
 }
 
 button{
-
-margin-top:40px;
-padding:16px 40px;
-font-size:18px;
-border:none;
-border-radius:50px;
-cursor:pointer;
-background:white;
-color:#ff4d6d;
-font-weight:bold;
-transition:.35s;
-
+    margin-top:40px;
+    padding:16px 40px;
+    font-size:18px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    background:white;
+    color:#ff4d6d;
+    font-weight:bold;
+    transition:.35s;
+    animation:glow 2s infinite;
 }
 
 button:hover{
-
-transform:scale(1.08);
-
-box-shadow:0 0 25px rgba(255,255,255,.5);
-
+    transform:scale(1.08);
+    box-shadow:0 0 25px rgba(255,255,255,.5);
 }
 
-/* Sections */
-
+/* Sections Layout */
 section{
-
-padding:100px 25px;
-
+    padding:100px 25px;
 }
 
-/* Glass Card */
+section h2{
+    text-align:center;
+    margin-bottom:35px;
+    font-size:42px;
+    text-shadow:0 0 10px rgba(255,255,255,.4);
+}
 
+/* Glass Message Card */
 .glass{
-
-max-width:900px;
-
-margin:auto;
-
-background:rgba(255,255,255,.15);
-
-backdrop-filter:blur(18px);
-
-padding:45px;
-
-border-radius:25px;
-
-box-shadow:0 10px 35px rgba(0,0,0,.25);
-
-text-align:center;
-
+    max-width:900px;
+    margin:auto;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(18px);
+    padding:45px;
+    border-radius:25px;
+    box-shadow:0 10px 35px rgba(0,0,0,.25);
+    text-align:center;
+    animation:floatCard 5s ease-in-out infinite;
 }
 
 .glass h2{
-
-font-size:40px;
-margin-bottom:25px;
-
+    font-size:40px;
+    margin-bottom:25px;
 }
 
 .glass h3{
-
-margin-top:30px;
-
-font-size:28px;
-
+    margin-top:30px;
+    font-size:28px;
 }
 
 .glass p{
-
-font-size:20px;
-
-line-height:1.9;
-
-margin:18px 0;
-
+    font-size:20px;
+    line-height:1.9;
+    margin:18px 0;
 }
 
 .glass span{
-
-color:#ffe66d;
-font-size:35px;
-
+    color:#ffe66d;
+    font-size:35px;
 }
 
-/* Hidden */
-
-.hidden{
-
-display:none;
-
+/* ⚡ THE FIX: This forces elements to disappear when they have the 'hidden' class */
+.hidden {
+    display: none !important;
 }
 
-/* Gifts */
-
+/* Gifts Container */
 .gift-container{
-
-display:flex;
-
-justify-content:center;
-
-gap:35px;
-
-flex-wrap:wrap;
-
-margin-top:50px;
-
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
+    margin-top:50px;
 }
 
 .gift{
-
-width:170px;
-
-height:170px;
-
-background:rgba(255,255,255,.15);
-
-border-radius:25px;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:65px;
-
-cursor:pointer;
-
-transition:.3s;
-
-backdrop-filter:blur(10px);
-
+    width:170px;
+    height:170px;
+    background:rgba(255,255,255,.15);
+    border-radius:25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:65px;
+    cursor:pointer;
+    transition:.3s;
+    backdrop-filter:blur(10px);
+    animation:floatCard 5s ease-in-out infinite;
 }
 
 .gift:hover{
-
-transform:translateY(-10px) scale(1.08);
-
+    transform:translateY(-10px) scale(1.08);
 }
 
 .gift p{
-
-margin-top:10px;
-
-font-size:20px;
-
+    margin-top:10px;
+    font-size:20px;
 }
 
-/* Popup */
-
+/* ⚡ THE POPUP FIX: High z-index keeps it over everything, display hidden rule keeps it hidden on launch */
 .popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.75);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999; 
+}
 
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-background:rgba(0,0,0,.65);
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-z-index:999;
-
+/* Forces the popup to look hidden when 'hidden' class is added */
+.popup.hidden {
+    display: none !important;
 }
 
 .popup-content{
-
-background:white;
-
-color:#333;
-
-padding:35px;
-
-border-radius:20px;
-
-max-width:500px;
-
-width:90%;
-
-text-align:center;
-
-position:relative;
-
+    background:white;
+    color:#333;
+    padding:35px;
+    border-radius:20px;
+    max-width:500px;
+    width:90%;
+    text-align:center;
+    position:relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
 .popup-content h2{
-
-margin-bottom:20px;
-
+    margin-bottom:20px;
 }
 
 .popup-content p{
-
-font-size:19px;
-
-line-height:1.8;
-
+    font-size:19px;
+    line-height:1.8;
 }
 
 #closePopup{
-
-position:absolute;
-
-right:20px;
-
-top:10px;
-
-font-size:35px;
-
-cursor:pointer;
-
+    position:absolute;
+    right:20px;
+    top:10px;
+    font-size:35px;
+    cursor:pointer;
+    color: #333;
+    z-index: 100000;
 }
 
-/* Letter */
-
+/* Letter Section */
 .letter{
-
-max-width:900px;
-
-margin:auto;
-
-background:white;
-
-color:#333;
-
-padding:50px;
-
-border-radius:25px;
-
-line-height:2;
-
-box-shadow:0 10px 30px rgba(0,0,0,.25);
-
+    max-width:900px;
+    margin:auto;
+    background:white;
+    color:#333;
+    padding:50px;
+    border-radius:25px;
+    line-height:2;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    animation:floatCard 5s ease-in-out infinite;
 }
 
 .letter h2{
-
-text-align:center;
-
-margin-bottom:25px;
-
-font-size:40px;
-
+    text-align:center;
+    margin-bottom:25px;
+    font-size:40px;
 }
 
 .letter h3{
-
-text-align:center;
-
-margin-top:35px;
-
+    text-align:center;
+    margin-top:35px;
 }
 
-/* Final */
-
+/* Final Screen */
 #finalSection{
-
-text-align:center;
-
+    text-align:center;
 }
 
 #finalSection h1{
-
-font-size:60px;
-
-margin-bottom:30px;
-
+    font-size:60px;
+    margin-bottom:30px;
 }
 
 #finalSection p{
-
-font-size:24px;
-
-max-width:850px;
-
-margin:auto;
-
-line-height:2;
-
+    font-size:24px;
+    max-width:850px;
+    margin:auto;
+    line-height:2;
 }
 
 #finalSection h2{
-
-margin-top:40px;
-
+    margin-top:40px;
 }
 
-/* Responsive */
-
-@media(max-width:768px){
-
-.hero h1{
-
-font-size:52px;
-
-}
-
-.subtitle{
-
-font-size:18px;
-
-}
-
-.glass h2{
-
-font-size:30px;
-
-}
-
-.glass p{
-
-font-size:17px;
-
-}
-
-button{
-
-width:90%;
-
-}
-
-.gift{
-
-width:140px;
-
-height:140px;
-
-}
-
-}
-
-/* ===============================
-   PART 2B
-   Animations & Decorations
-================================ */
-
-/* Stars */
-
+/* Background Floating Animations */
 .stars,
 .hearts,
 .balloons{
@@ -478,7 +297,6 @@ height:140px;
 }
 
 /* Twinkling stars */
-
 .stars::before{
     content:"";
     position:absolute;
@@ -502,317 +320,126 @@ height:140px;
 }
 
 @keyframes twinkle{
-
-from{
-opacity:.3;
-transform:scale(.8);
+    from{ opacity:.3; transform:scale(.8); }
+    to{ opacity:1; transform:scale(1.4); }
 }
 
-to{
-opacity:1;
-transform:scale(1.4);
-}
-
-}
-
-/* Hearts */
-
+/* Floating Hearts */
 .hearts::before{
-
-content:"❤️ ❤️ 💖 💕 ❤️ 💖 💕 ❤️";
-
-position:absolute;
-
-font-size:30px;
-
-left:-20%;
-
-top:25%;
-
-white-space:nowrap;
-
-animation:heartMove 22s linear infinite;
-
-opacity:.4;
-
+    content:"❤️ ❤️ 💖 💕 ❤️ 💖 💕 ❤️";
+    position:absolute;
+    font-size:30px;
+    left:-20%;
+    top:25%;
+    white-space:nowrap;
+    animation:heartMove 22s linear infinite;
+    opacity:.4;
 }
 
 @keyframes heartMove{
-
-from{
-
-transform:translateX(-20%);
-
+    from{ transform:translateX(-20%); }
+    to{ transform:translateX(140%); }
 }
 
-to{
-
-transform:translateX(140%);
-
-}
-
-}
-
-/* Balloons */
-
+/* Floating Balloons */
 .balloons::before{
-
-content:"🎈 🎈 🎈 🎈 🎈 🎈";
-
-position:absolute;
-
-bottom:-120px;
-
-font-size:55px;
-
-left:10%;
-
-animation:balloonsUp 18s linear infinite;
-
+    content:"🎈 🎈 🎈 🎈 🎈 🎈";
+    position:absolute;
+    bottom:-120px;
+    font-size:55px;
+    left:10%;
+    animation:balloonsUp 18s linear infinite;
 }
 
 @keyframes balloonsUp{
-
-0%{
-
-transform:translateY(0);
-
+    0%{ transform:translateY(0); }
+    100%{ transform:translateY(-140vh); }
 }
 
-100%{
-
-transform:translateY(-140vh);
-
-}
-
-}
-
-/* Cake */
-
+/* Birthday Cake Element */
 .cake{
-
-position:relative;
-
-width:220px;
-
-margin:60px auto;
-
+    position:relative;
+    width:220px;
+    margin:60px auto;
 }
 
 .layer{
-
-height:55px;
-
-border-radius:15px;
-
-margin:8px 0;
-
+    height:55px;
+    border-radius:15px;
+    margin:8px 0;
 }
 
-.one{
-
-background:#ff9aa2;
-
-}
-
-.two{
-
-background:#ffd166;
-
-}
-
-.three{
-
-background:#ffffff;
-
-}
+.one{ background:#ff9aa2; }
+.two{ background:#ffd166; }
+.three{ background:#ffffff; }
 
 /* Candle */
-
 .candle{
-
-width:16px;
-
-height:65px;
-
-background:white;
-
-margin:auto;
-
-position:relative;
-
-border-radius:10px;
-
+    width:16px;
+    height:65px;
+    background:white;
+    margin:auto;
+    position:relative;
+    border-radius:10px;
 }
 
 .flame{
-
-width:18px;
-
-height:18px;
-
-background:gold;
-
-border-radius:50%;
-
-position:absolute;
-
-top:-18px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-box-shadow:0 0 20px gold;
-
-animation:flicker .5s infinite alternate;
-
+    width:18px;
+    height:18px;
+    background:gold;
+    border-radius:50%;
+    position:absolute;
+    top:-18px;
+    left:50%;
+    transform:translateX(-50%);
+    box-shadow:0 0 20px gold;
+    animation:flicker .5s infinite alternate;
 }
 
 @keyframes flicker{
-
-from{
-
-transform:translateX(-50%) scale(1);
-
+    from{ transform:translateX(-50%) scale(1); }
+    to{ transform:translateX(-50%) scale(1.15); }
 }
 
-to{
-
-transform:translateX(-50%) scale(1.15);
-
-}
-
-}
-
-/* Confetti Canvas */
-
+/* ⚡ THE CONFETTI FIX: Keeps z-index lower than the popup so click triggers correctly */
 #confetti{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-pointer-events:none;
-
-z-index:999;
-
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:99; 
 }
 
-/* Fade Animation */
-
+/* General Animations */
 .fadeIn{
-
-animation:fadeIn 1s ease;
-
+    animation:fadeIn 1s ease;
 }
 
 @keyframes fadeIn{
-
-from{
-
-opacity:0;
-
-transform:translateY(40px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-/* Floating Effect */
-
-.glass,
-.letter,
-.gift{
-
-animation:floatCard 5s ease-in-out infinite;
-
+    from{ opacity:0; transform:translateY(40px); }
+    to{ opacity:1; transform:translateY(0); }
 }
 
 @keyframes floatCard{
-
-0%{
-
-transform:translateY(0);
-
-}
-
-50%{
-
-transform:translateY(-8px);
-
-}
-
-100%{
-
-transform:translateY(0);
-
-}
-
-}
-
-/* Button Glow */
-
-button{
-
-animation:glow 2s infinite;
-
+    0%{ transform:translateY(0); }
+    50%{ transform:translateY(-8px); }
+    100%{ transform:translateY(0); }
 }
 
 @keyframes glow{
-
-0%{
-
-box-shadow:0 0 8px rgba(255,255,255,.3);
-
+    0%{ box-shadow:0 0 8px rgba(255,255,255,.3); }
+    50%{ box-shadow:0 0 30px rgba(255,255,255,.8); }
+    100%{ box-shadow:0 0 8px rgba(255,255,255,.3); }
 }
 
-50%{
-
-box-shadow:0 0 30px rgba(255,255,255,.8);
-
-}
-
-100%{
-
-box-shadow:0 0 8px rgba(255,255,255,.3);
-
-}
-
-}
-
-/* Section Titles */
-
-section h2{
-
-text-align:center;
-
-margin-bottom:35px;
-
-font-size:42px;
-
-text-shadow:0 0 10px rgba(255,255,255,.4);
-
-}
-
-/* Footer Space */
-
-body{
-
-padding-bottom:80px;
-
+/* Mobile Responsiveness Screen Settings */
+@media(max-width:768px){
+    .hero h1{ font-size:52px; }
+    .subtitle{ font-size:18px; }
+    .glass h2{ font-size:30px; }
+    .glass p{ font-size:17px; }
+    button{ width:90%; }
+    .gift{ width:140px; height:140px; }
 }
