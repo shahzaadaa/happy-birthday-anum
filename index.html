@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Anum ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Loader Section -->
+<div id="loader">
+    <h1>Loading a Special Surprise...</h1>
+</div>
+
+<!-- Decorative Background Elements -->
+<div class="stars"></div>
+<div class="hearts"></div>
+<div class="balloons"></div>
+
+<!-- Hero Welcome Section -->
+<section class="hero">
+    <h3>🎉 Happy Birthday 🎉</h3>
+    <h1>Anum ❤️</h1>
+    <p class="subtitle">
+        Today isn't just another day.
+        It's the day the world became a little brighter because you were born.
+    </p>
+    <button id="startBtn">
+        Open Your Surprise 🎁
+    </button>
+</section>
+
+<!-- Main Birthday Message -->
+<section id="surprise" class="hidden">
+    <div class="glass">
+        <h2>Dear Anum 🌸</h2>
+        <p>
+            Happy Birthday to the most amazing best friend anyone could ever ask for.
+            Thank you for always being yourself, for spreading kindness,
+            and for making every conversation brighter.
+        </p>
+        <p>
+            I genuinely hope this new year of your life is filled with happiness,
+            success, peace, laughter, beautiful memories,
+            and countless reasons to smile every single day.
+        </p>
+        <p>
+            May Allah bless you with good health,
+            endless happiness,
+            and make every dream of yours come true.
+        </p>
+        <p>
+            Thank you for being such an important part of my life.
+            Your friendship means more to me than words can express.
+        </p>
+        <h3>
+            Happy Birthday Once Again ❤️
+        </h3>
+        <h2>
+            From Your Best Friend,
+            <br>
+            <span>Muneeb</span>
+        </h2>
+    </div>
+</section>
+
+<!-- Interactive Gift Section -->
+<section id="giftSection" class="hidden">
+    <h2>Someone Left You Some Gifts 🎁</h2>
+    <div class="gift-container">
+        <div class="gift" onclick="openGift(1)">
+            🎁
+            <p>Gift 1</p>
+        </div>
+        <div class="gift" onclick="openGift(2)">
+            🎁
+            <p>Gift 2</p>
+        </div>
+        <div class="gift" onclick="openGift(3)">
+            🎁
+            <p>Gift 3</p>
+        </div>
+    </div>
+</section>
+
+<!-- Surprise Popup Modal Box -->
+<div id="popup" class="popup hidden">
+    <div class="popup-content">
+        <span id="closePopup">&times;</span>
+        <h2>Surprise ❤️</h2>
+        <p id="giftMessage"></p>
+    </div>
+</div>
+
+<!-- Cake Section -->
+<section id="cakeSection" class="hidden">
+    <h2>Make a Birthday Wish ✨</h2>
+    <div class="cake">
+        <div class="candle">
+            <div class="flame"></div>
+        </div>
+        <div class="layer one"></div>
+        <div class="layer two"></div>
+        <div class="layer three"></div>
+    </div>
+    <button id="blowBtn">
+        Blow the Candle 🕯️
+    </button>
+</section>
+
+<!-- Letter Section -->
+<section id="letterSection" class="hidden">
+    <div class="letter">
+        <h2>💌 A Letter For You</h2>
+        <p>
+            Dear Anum,
+            <br><br>
+            I don't know if words can ever fully express how grateful I am to have you as my best friend.
+            <br><br>
+            Thank you for every smile, every conversation, every moment, and every memory.
+            <br><br>
+            You truly make life brighter just by being yourself.
+            <br><br>
+            No matter where life takes us, I sincerely pray that you always stay happy, healthy, successful, and surrounded by people who value you just as much as you deserve.
+            <br><br>
+            Never stop smiling. Because your smile is priceless.
+            <br><br>
+            Happy Birthday once again. May Allah bless you today, tomorrow, and always.
+            <br><br>
+            ❤️
+        </p>
+        <h3>
+            With lots of prayers,
+            <br><br>
+            Your Best Friend,
+            <br><br>
+            Muneeb
+        </h3>
+    </div>
+</section>
+
+<!-- Final Wish Section -->
+<section id="finalSection" class="hidden">
+    <h1>🎉 HAPPY BIRTHDAY ANUM ❤️</h1>
+    <p>
+        Thank you for visiting this little surprise.
+        I hope it made you smile.
+        May this birthday become one of your happiest memories.
+        Always keep shining.
+        <br><br>
+        🌸✨🎂🎈❤️
+    </p>
+    <h2>
+        Forever Wishing You The Best,
+        <br>
+        Muneeb
+    </h2>
+</section>
+
+<!-- Confetti Effect Layer -->
+<canvas id="confetti"></canvas>
+
+<!-- Background Music -->
+<audio id="music" loop>
+    <source src="birthday.mp3" type="audio/mpeg">
+</audio>
+
+<!-- External Scripts Link -->
+<script src="script.js"></script>
+
+</body>
+</html>

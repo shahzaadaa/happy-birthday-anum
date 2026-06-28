@@ -1,0 +1,818 @@
+/* ===================================
+   HAPPY BIRTHDAY WEBSITE
+   By Muneeb ❤️
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ff6b81,#ff9ff3,#7d5fff,#48dbfb);
+    background-size:400% 400%;
+    animation:bgMove 15s infinite ease;
+    color:#fff;
+    overflow-x:hidden;
+    min-height:100vh;
+}
+
+@keyframes bgMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* Loader */
+
+#loader{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#111;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+
+}
+
+#loader h1{
+
+font-size:35px;
+animation:pulse 1.2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{opacity:.5;}
+50%{opacity:1;}
+100%{opacity:.5;}
+
+}
+
+/* Hero */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+.hero h3{
+
+font-size:28px;
+margin-bottom:20px;
+
+}
+
+.hero h1{
+
+font-size:75px;
+font-weight:700;
+margin-bottom:20px;
+text-shadow:0 0 20px rgba(255,255,255,.4);
+
+}
+
+.subtitle{
+
+max-width:750px;
+font-size:22px;
+line-height:1.8;
+
+}
+
+button{
+
+margin-top:40px;
+padding:16px 40px;
+font-size:18px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:white;
+color:#ff4d6d;
+font-weight:bold;
+transition:.35s;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 25px rgba(255,255,255,.5);
+
+}
+
+/* Sections */
+
+section{
+
+padding:100px 25px;
+
+}
+
+/* Glass Card */
+
+.glass{
+
+max-width:900px;
+
+margin:auto;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(18px);
+
+padding:45px;
+
+border-radius:25px;
+
+box-shadow:0 10px 35px rgba(0,0,0,.25);
+
+text-align:center;
+
+}
+
+.glass h2{
+
+font-size:40px;
+margin-bottom:25px;
+
+}
+
+.glass h3{
+
+margin-top:30px;
+
+font-size:28px;
+
+}
+
+.glass p{
+
+font-size:20px;
+
+line-height:1.9;
+
+margin:18px 0;
+
+}
+
+.glass span{
+
+color:#ffe66d;
+font-size:35px;
+
+}
+
+/* Hidden */
+
+.hidden{
+
+display:none;
+
+}
+
+/* Gifts */
+
+.gift-container{
+
+display:flex;
+
+justify-content:center;
+
+gap:35px;
+
+flex-wrap:wrap;
+
+margin-top:50px;
+
+}
+
+.gift{
+
+width:170px;
+
+height:170px;
+
+background:rgba(255,255,255,.15);
+
+border-radius:25px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:65px;
+
+cursor:pointer;
+
+transition:.3s;
+
+backdrop-filter:blur(10px);
+
+}
+
+.gift:hover{
+
+transform:translateY(-10px) scale(1.08);
+
+}
+
+.gift p{
+
+margin-top:10px;
+
+font-size:20px;
+
+}
+
+/* Popup */
+
+.popup{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.65);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:999;
+
+}
+
+.popup-content{
+
+background:white;
+
+color:#333;
+
+padding:35px;
+
+border-radius:20px;
+
+max-width:500px;
+
+width:90%;
+
+text-align:center;
+
+position:relative;
+
+}
+
+.popup-content h2{
+
+margin-bottom:20px;
+
+}
+
+.popup-content p{
+
+font-size:19px;
+
+line-height:1.8;
+
+}
+
+#closePopup{
+
+position:absolute;
+
+right:20px;
+
+top:10px;
+
+font-size:35px;
+
+cursor:pointer;
+
+}
+
+/* Letter */
+
+.letter{
+
+max-width:900px;
+
+margin:auto;
+
+background:white;
+
+color:#333;
+
+padding:50px;
+
+border-radius:25px;
+
+line-height:2;
+
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.letter h2{
+
+text-align:center;
+
+margin-bottom:25px;
+
+font-size:40px;
+
+}
+
+.letter h3{
+
+text-align:center;
+
+margin-top:35px;
+
+}
+
+/* Final */
+
+#finalSection{
+
+text-align:center;
+
+}
+
+#finalSection h1{
+
+font-size:60px;
+
+margin-bottom:30px;
+
+}
+
+#finalSection p{
+
+font-size:24px;
+
+max-width:850px;
+
+margin:auto;
+
+line-height:2;
+
+}
+
+#finalSection h2{
+
+margin-top:40px;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:52px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+}
+
+.glass h2{
+
+font-size:30px;
+
+}
+
+.glass p{
+
+font-size:17px;
+
+}
+
+button{
+
+width:90%;
+
+}
+
+.gift{
+
+width:140px;
+
+height:140px;
+
+}
+
+}
+
+/* ===============================
+   PART 2B
+   Animations & Decorations
+================================ */
+
+/* Stars */
+
+.stars,
+.hearts,
+.balloons{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+/* Twinkling stars */
+
+.stars::before{
+    content:"";
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    box-shadow:
+    40px 80px white,
+    180px 120px white,
+    300px 60px white,
+    500px 140px white,
+    700px 90px white,
+    900px 150px white,
+    1100px 70px white,
+    250px 300px white,
+    650px 350px white,
+    1000px 280px white,
+    1200px 420px white;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+
+from{
+opacity:.3;
+transform:scale(.8);
+}
+
+to{
+opacity:1;
+transform:scale(1.4);
+}
+
+}
+
+/* Hearts */
+
+.hearts::before{
+
+content:"❤️ ❤️ 💖 💕 ❤️ 💖 💕 ❤️";
+
+position:absolute;
+
+font-size:30px;
+
+left:-20%;
+
+top:25%;
+
+white-space:nowrap;
+
+animation:heartMove 22s linear infinite;
+
+opacity:.4;
+
+}
+
+@keyframes heartMove{
+
+from{
+
+transform:translateX(-20%);
+
+}
+
+to{
+
+transform:translateX(140%);
+
+}
+
+}
+
+/* Balloons */
+
+.balloons::before{
+
+content:"🎈 🎈 🎈 🎈 🎈 🎈";
+
+position:absolute;
+
+bottom:-120px;
+
+font-size:55px;
+
+left:10%;
+
+animation:balloonsUp 18s linear infinite;
+
+}
+
+@keyframes balloonsUp{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+100%{
+
+transform:translateY(-140vh);
+
+}
+
+}
+
+/* Cake */
+
+.cake{
+
+position:relative;
+
+width:220px;
+
+margin:60px auto;
+
+}
+
+.layer{
+
+height:55px;
+
+border-radius:15px;
+
+margin:8px 0;
+
+}
+
+.one{
+
+background:#ff9aa2;
+
+}
+
+.two{
+
+background:#ffd166;
+
+}
+
+.three{
+
+background:#ffffff;
+
+}
+
+/* Candle */
+
+.candle{
+
+width:16px;
+
+height:65px;
+
+background:white;
+
+margin:auto;
+
+position:relative;
+
+border-radius:10px;
+
+}
+
+.flame{
+
+width:18px;
+
+height:18px;
+
+background:gold;
+
+border-radius:50%;
+
+position:absolute;
+
+top:-18px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+box-shadow:0 0 20px gold;
+
+animation:flicker .5s infinite alternate;
+
+}
+
+@keyframes flicker{
+
+from{
+
+transform:translateX(-50%) scale(1);
+
+}
+
+to{
+
+transform:translateX(-50%) scale(1.15);
+
+}
+
+}
+
+/* Confetti Canvas */
+
+#confetti{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+z-index:999;
+
+}
+
+/* Fade Animation */
+
+.fadeIn{
+
+animation:fadeIn 1s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Floating Effect */
+
+.glass,
+.letter,
+.gift{
+
+animation:floatCard 5s ease-in-out infinite;
+
+}
+
+@keyframes floatCard{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Button Glow */
+
+button{
+
+animation:glow 2s infinite;
+
+}
+
+@keyframes glow{
+
+0%{
+
+box-shadow:0 0 8px rgba(255,255,255,.3);
+
+}
+
+50%{
+
+box-shadow:0 0 30px rgba(255,255,255,.8);
+
+}
+
+100%{
+
+box-shadow:0 0 8px rgba(255,255,255,.3);
+
+}
+
+}
+
+/* Section Titles */
+
+section h2{
+
+text-align:center;
+
+margin-bottom:35px;
+
+font-size:42px;
+
+text-shadow:0 0 10px rgba(255,255,255,.4);
+
+}
+
+/* Footer Space */
+
+body{
+
+padding-bottom:80px;
+
+}
